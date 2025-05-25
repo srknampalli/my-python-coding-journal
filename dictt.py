@@ -41,7 +41,8 @@
 products = {"laptop": 1200, "phone": 800, "tablet": 400, "monitor": 200}
 
 
-res_dict =   {key:value for key,value in products.items() if value > 500 }
+res_dict =   {value for key,value in products.items() if value > 500 }
 
 
 print(res_dict)
+

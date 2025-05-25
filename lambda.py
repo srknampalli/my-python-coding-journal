@@ -35,12 +35,22 @@ print(sorted_xs)
 # print(second_max)
 
 
+
+
+
 #Sorted method with lamda
 
 
-# students = [("Alice", 88), ("Bob", 75), ("Charlie", 95), ("David", 85)]
+students = [("Alice", 88), ("Bob", 75), ("Charlie", 95), ("David", 85)]
 # sorted_students = sorted(students, key=lambda student: student[0])
 # print(sorted_students) 
+
+s_stu = key = sorted(students ,key=lambda student:student[1])
+
+#for descending order s_stu = sorted(students, key=lambda student: student[1], reverse=True)
+
+# print(s_stu)
+
 
 # #Sorting a List of Strings by Length
 # fruits = ["apple", "banana", "cherry", "date", "elderberry", "fig", "grape"]
@@ -81,6 +91,19 @@ print(sorted_xs)
 
 # animals = ["elephant", "Dog", "cat", "Bear", "antelope"]
 
+# sorted_ani = sorted(animals,key=lambda animal:animal.lower())
+
+# print(sorted_ani)
+
+
+
+
+
+
+
+
+
+
 # sorted_ani = sorted(animals, key= lambda animal:animal.lower())
 
 # print(sorted_ani)
@@ -88,7 +111,18 @@ print(sorted_xs)
 #Sorting a List of Tuples by the Sum of Elements:
 #Given a list of tuples where each tuple contains two numbers, sort the list by the sum of the numbers in each tuple.
 
-# pairs = [(1, 2), (3, 4), (5, 6), (5, 7)]
+pairs = [(1, 20), (8, 4), (5, 9), (5, 7)]
+
+opairs = sorted(pairs,key=lambda pair: pair[0]+pair[1])
+
+print(opairs)
+ 
+ 
+
+
+
+
+
 
 
 
@@ -128,15 +162,26 @@ print(sorted_xs)
 
 # print(celsius)
 
-# words = ["hello", "world", "python", "programming"]
+words = ["hello", "world", "python", "programming"]
 
 # capital_w = list(map(lambda word:word.upper(),words))
 
 # print(capital_w)
 
+op = list(map(lambda word:word.upper(),words))
+
+# print(op)
 
 
-# numbers = [1, 2, 3, 4, 5]
+numbers = [1, 2, 3, 4, 5]
+
+
+opnum = list(map (lambda num:num**2,numbers))
+
+print(opnum)
+
+
+
 
 # sq_num= list(map(lambda num:num**2,numbers))
 
@@ -196,7 +241,18 @@ print(sorted_xs)
 # Exercise 2: Filter Strings of a Certain Length
 # Given a list of strings, use filter() and a lambda function to return a list of strings that have more than 4 characters.
 
-# words = ["apple", "banana", "cat", "dog", "elephant", "fish"]
+words = ["apple", "banana", "cat", "dog", "elephant", "fish"]
+
+opowrds= list(filter(lambda word:  len(word) > 4,words))
+
+print(opowrds)
+
+
+
+
+
+
+
 
 # four_words = list(filter(lambda word:len(word)>4,words))
 
